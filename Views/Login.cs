@@ -26,5 +26,10 @@ namespace EventController.Views
         {
 
         }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            //hello 
+        }
     }
 }
