@@ -27,9 +27,34 @@ namespace EventController.Views
 
         }
 
+        private void clr()
+        {
+            EmailTxtBox.Text = "";
+            PassTxtBox.Text = "";
+        }
+
+        private bool isValid()
+        {
+            if (EmailTxtBox.Text == "" ||  PassTxtBox.Text == "")
+                return false;
+            return true;
+        }
+
+
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            //hello 
+            if (!isValid()) return;
+
+            bool found = db.Get.LoginAuth(EmailTxtBox.Text, PassTxtBox.Text);
+            if (found)
+            {
+                MessageBox.Show("Login Success");
+                clr();
+            }
+            else
+            {
+                MessageBox.Show("Login Failed");
+            }
         }
     }
 }
