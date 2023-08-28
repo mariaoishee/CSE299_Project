@@ -62,11 +62,11 @@ namespace EventController.Views
                 client.DeliveryMethod = SmtpDeliveryMethod.Network;
                 client.UseDefaultCredentials = false;
 
-                System.Net.NetworkCredential credential = new System.Net.NetworkCredential("rownak.shr@hotmail.com", "kuttarbacha123");
+                System.Net.NetworkCredential credential = new System.Net.NetworkCredential("eventController@hotmail.com", "event123");
                 client.EnableSsl = true;
                 client.Credentials = credential;
 
-                MailMessage message = new MailMessage("rownak.shr@hotmail.com", EmailTxtBox.Text);
+                MailMessage message = new MailMessage("eventController@hotmail.com", EmailTxtBox.Text);
                 message.Subject = "Welcome to BPL Event Management Panel";
 
                 message.Body = Email.sendWelcome();
@@ -84,7 +84,7 @@ namespace EventController.Views
 
 
             clr();
-            _ = MessageBox.Show("Entry Completed");
+            _ = MessageBox.Show("Email Sent");
         }
 
 
