@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace EventController
 {
@@ -27,6 +29,29 @@ namespace EventController
                 }
             }
             return res.ToString();
+        }
+        public static bool FileTrasfer(string oldPath, string newFileName)
+        {
+            string newpath = @"C:\CSE299_EventController_Images\";
+            byte[] uintBuffer = new byte[sizeof(uint)];
+            try
+            {
+                FileInfo f1 = new FileInfo(oldPath);
+                if (f1.Exists)
+                {
+                    if (!Directory.Exists(newpath))
+                    {
+                        Directory.CreateDirectory(newpath);
+                    }
+                    f1.CopyTo(string.Format("{0}{1}{2}", newpath, newFileName, f1.Extension));
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
         }
 
     }

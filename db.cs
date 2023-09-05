@@ -24,6 +24,35 @@ namespace EventController
 
         public class Post
         {
+            public static void InsertNewTeam(string TeamID, string TeamName, string Image, string Banner,
+                string OwnerImage, string OwnerName, string ManagerImage, string ManagerName,
+                string TeamShortName)
+            {
+                using (SqlConnection connection = new SqlConnection(db.Connection_String()))
+                {
+                    using (SqlCommand cmd = new SqlCommand("InsertNewTeam", connection))
+                    {
+                        connection.Open();
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@TeamID", TeamID);
+                        cmd.Parameters.AddWithValue("@TeamName", TeamName);
+                        cmd.Parameters.AddWithValue("@Image", Image);
+                        cmd.Parameters.AddWithValue("@Banner", Banner);
+                        cmd.Parameters.AddWithValue("@OwnerImage", OwnerImage);
+                        cmd.Parameters.AddWithValue("@OwnerName", OwnerName);
+                        cmd.Parameters.AddWithValue("@ManagerImage", ManagerImage);
+                        cmd.Parameters.AddWithValue("@ManagerName", ManagerName);
+                        cmd.Parameters.AddWithValue("@DateTime", DateTime.Now);
+                        cmd.Parameters.AddWithValue("@TeamShortName", TeamShortName);
+
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            
+
+
             public static void InsertNewAdminDetails(
                 string adminID, string name, string email, 
                 string address, string phoneNumber, string nid, 

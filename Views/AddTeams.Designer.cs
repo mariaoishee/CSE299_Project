@@ -28,48 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TeamImgLbl = new System.Windows.Forms.Label();
-            this.TeamImageBox = new System.Windows.Forms.Button();
+            this.LocationTeamImg = new System.Windows.Forms.Label();
+            this.TeamLogoImg = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.PassTxtBox = new System.Windows.Forms.TextBox();
+            this.TeamNameTxtBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TeamShortNameTxtBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.OwnerNameTxtBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.ManagerNameTxtBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.BannerImg = new System.Windows.Forms.Button();
+            this.OwnerImg = new System.Windows.Forms.Button();
+            this.ManagerImg = new System.Windows.Forms.Button();
+            this.LocationBannerImg = new System.Windows.Forms.Label();
+            this.LocationOwnerImg = new System.Windows.Forms.Label();
+            this.LocationManagerImg = new System.Windows.Forms.Label();
             this.Label = new System.Windows.Forms.Label();
-            this.LoginButton = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.InsertButton = new System.Windows.Forms.Button();
+            this.CancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // TeamImgLbl
+            // LocationTeamImg
             // 
-            this.TeamImgLbl.AutoSize = true;
-            this.TeamImgLbl.Location = new System.Drawing.Point(348, 144);
-            this.TeamImgLbl.Name = "TeamImgLbl";
-            this.TeamImgLbl.Size = new System.Drawing.Size(61, 13);
-            this.TeamImgLbl.TabIndex = 20;
-            this.TeamImgLbl.Text = "Team Logo";
+            this.LocationTeamImg.AutoSize = true;
+            this.LocationTeamImg.Location = new System.Drawing.Point(348, 144);
+            this.LocationTeamImg.Name = "LocationTeamImg";
+            this.LocationTeamImg.Size = new System.Drawing.Size(61, 13);
+            this.LocationTeamImg.TabIndex = 20;
+            this.LocationTeamImg.Text = "Team Logo";
             // 
-            // TeamImageBox
+            // TeamLogoImg
             // 
-            this.TeamImageBox.Location = new System.Drawing.Point(351, 118);
-            this.TeamImageBox.Name = "TeamImageBox";
-            this.TeamImageBox.Size = new System.Drawing.Size(142, 23);
-            this.TeamImageBox.TabIndex = 18;
-            this.TeamImageBox.Text = "Select Image";
-            this.TeamImageBox.UseVisualStyleBackColor = true;
+            this.TeamLogoImg.Location = new System.Drawing.Point(351, 118);
+            this.TeamLogoImg.Name = "TeamLogoImg";
+            this.TeamLogoImg.Size = new System.Drawing.Size(142, 23);
+            this.TeamLogoImg.TabIndex = 18;
+            this.TeamLogoImg.Text = "Select Image";
+            this.TeamLogoImg.UseVisualStyleBackColor = true;
+            this.TeamLogoImg.Click += new System.EventHandler(this.TeamImageBox_Click);
             // 
             // label2
             // 
@@ -81,12 +82,12 @@
             this.label2.TabIndex = 24;
             this.label2.Text = "Team Name";
             // 
-            // PassTxtBox
+            // TeamNameTxtBox
             // 
-            this.PassTxtBox.Location = new System.Drawing.Point(27, 121);
-            this.PassTxtBox.Name = "PassTxtBox";
-            this.PassTxtBox.Size = new System.Drawing.Size(263, 20);
-            this.PassTxtBox.TabIndex = 23;
+            this.TeamNameTxtBox.Location = new System.Drawing.Point(27, 121);
+            this.TeamNameTxtBox.Name = "TeamNameTxtBox";
+            this.TeamNameTxtBox.Size = new System.Drawing.Size(263, 20);
+            this.TeamNameTxtBox.TabIndex = 23;
             // 
             // label1
             // 
@@ -98,12 +99,12 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Owner Name";
             // 
-            // textBox1
+            // TeamShortNameTxtBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(27, 252);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(263, 20);
-            this.textBox1.TabIndex = 25;
+            this.TeamShortNameTxtBox.Location = new System.Drawing.Point(27, 252);
+            this.TeamShortNameTxtBox.Name = "TeamShortNameTxtBox";
+            this.TeamShortNameTxtBox.Size = new System.Drawing.Size(263, 20);
+            this.TeamShortNameTxtBox.TabIndex = 25;
             // 
             // label3
             // 
@@ -115,12 +116,12 @@
             this.label3.TabIndex = 28;
             this.label3.Text = "Manager Name";
             // 
-            // textBox2
+            // OwnerNameTxtBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(27, 380);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(263, 20);
-            this.textBox2.TabIndex = 27;
+            this.OwnerNameTxtBox.Location = new System.Drawing.Point(27, 380);
+            this.OwnerNameTxtBox.Name = "OwnerNameTxtBox";
+            this.OwnerNameTxtBox.Size = new System.Drawing.Size(263, 20);
+            this.OwnerNameTxtBox.TabIndex = 27;
             // 
             // label5
             // 
@@ -132,12 +133,12 @@
             this.label5.TabIndex = 30;
             this.label5.Text = "Team Name Short Form";
             // 
-            // textBox3
+            // ManagerNameTxtBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(27, 519);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(263, 20);
-            this.textBox3.TabIndex = 29;
+            this.ManagerNameTxtBox.Location = new System.Drawing.Point(27, 519);
+            this.ManagerNameTxtBox.Name = "ManagerNameTxtBox";
+            this.ManagerNameTxtBox.Size = new System.Drawing.Size(263, 20);
+            this.ManagerNameTxtBox.TabIndex = 29;
             // 
             // label6
             // 
@@ -179,59 +180,62 @@
             this.label9.TabIndex = 34;
             this.label9.Text = "Manager Image";
             // 
-            // button1
+            // BannerImg
             // 
-            this.button1.Location = new System.Drawing.Point(351, 250);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 23);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "Select Image";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BannerImg.Location = new System.Drawing.Point(351, 250);
+            this.BannerImg.Name = "BannerImg";
+            this.BannerImg.Size = new System.Drawing.Size(142, 23);
+            this.BannerImg.TabIndex = 35;
+            this.BannerImg.Text = "Select Image";
+            this.BannerImg.UseVisualStyleBackColor = true;
+            this.BannerImg.Click += new System.EventHandler(this.BannerImg_Click);
             // 
-            // button2
+            // OwnerImg
             // 
-            this.button2.Location = new System.Drawing.Point(351, 377);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(142, 23);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "Select Image";
-            this.button2.UseVisualStyleBackColor = true;
+            this.OwnerImg.Location = new System.Drawing.Point(351, 377);
+            this.OwnerImg.Name = "OwnerImg";
+            this.OwnerImg.Size = new System.Drawing.Size(142, 23);
+            this.OwnerImg.TabIndex = 36;
+            this.OwnerImg.Text = "Select Image";
+            this.OwnerImg.UseVisualStyleBackColor = true;
+            this.OwnerImg.Click += new System.EventHandler(this.OwnerImg_Click);
             // 
-            // button3
+            // ManagerImg
             // 
-            this.button3.Location = new System.Drawing.Point(351, 516);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(142, 23);
-            this.button3.TabIndex = 37;
-            this.button3.Text = "Select Image";
-            this.button3.UseVisualStyleBackColor = true;
+            this.ManagerImg.Location = new System.Drawing.Point(351, 516);
+            this.ManagerImg.Name = "ManagerImg";
+            this.ManagerImg.Size = new System.Drawing.Size(142, 23);
+            this.ManagerImg.TabIndex = 37;
+            this.ManagerImg.Text = "Select Image";
+            this.ManagerImg.UseVisualStyleBackColor = true;
+            this.ManagerImg.Click += new System.EventHandler(this.ManagerImg_Click);
             // 
-            // label4
+            // LocationBannerImg
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(348, 276);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 13);
-            this.label4.TabIndex = 38;
-            this.label4.Text = "Team Banner";
+            this.LocationBannerImg.AutoSize = true;
+            this.LocationBannerImg.Location = new System.Drawing.Point(348, 276);
+            this.LocationBannerImg.Name = "LocationBannerImg";
+            this.LocationBannerImg.Size = new System.Drawing.Size(71, 13);
+            this.LocationBannerImg.TabIndex = 38;
+            this.LocationBannerImg.Text = "Team Banner";
             // 
-            // label10
+            // LocationOwnerImg
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(348, 403);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 13);
-            this.label10.TabIndex = 39;
-            this.label10.Text = "Owner Image";
+            this.LocationOwnerImg.AutoSize = true;
+            this.LocationOwnerImg.Location = new System.Drawing.Point(348, 403);
+            this.LocationOwnerImg.Name = "LocationOwnerImg";
+            this.LocationOwnerImg.Size = new System.Drawing.Size(70, 13);
+            this.LocationOwnerImg.TabIndex = 39;
+            this.LocationOwnerImg.Text = "Owner Image";
             // 
-            // label11
+            // LocationManagerImg
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(348, 542);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(81, 13);
-            this.label11.TabIndex = 40;
-            this.label11.Text = "Manager Image";
+            this.LocationManagerImg.AutoSize = true;
+            this.LocationManagerImg.Location = new System.Drawing.Point(348, 542);
+            this.LocationManagerImg.Name = "LocationManagerImg";
+            this.LocationManagerImg.Size = new System.Drawing.Size(81, 13);
+            this.LocationManagerImg.TabIndex = 40;
+            this.LocationManagerImg.Text = "Manager Image";
             // 
             // Label
             // 
@@ -244,54 +248,56 @@
             this.Label.Text = "INSERT TEAM INFO";
             this.Label.Click += new System.EventHandler(this.Label_Click);
             // 
-            // LoginButton
+            // InsertButton
             // 
-            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.LoginButton.Location = new System.Drawing.Point(524, 608);
-            this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(103, 45);
-            this.LoginButton.TabIndex = 42;
-            this.LoginButton.Text = "Insert";
-            this.LoginButton.UseVisualStyleBackColor = true;
+            this.InsertButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.InsertButton.Location = new System.Drawing.Point(524, 608);
+            this.InsertButton.Name = "InsertButton";
+            this.InsertButton.Size = new System.Drawing.Size(103, 45);
+            this.InsertButton.TabIndex = 42;
+            this.InsertButton.Text = "Insert";
+            this.InsertButton.UseVisualStyleBackColor = true;
+            this.InsertButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
-            // button4
+            // CancelButton
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.button4.Location = new System.Drawing.Point(404, 608);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(103, 45);
-            this.button4.TabIndex = 43;
-            this.button4.Text = "Cancel";
-            this.button4.UseVisualStyleBackColor = true;
+            this.CancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.CancelButton.Location = new System.Drawing.Point(404, 608);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(103, 45);
+            this.CancelButton.TabIndex = 43;
+            this.CancelButton.Text = "Cancel";
+            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // AddTeams
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(653, 675);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.LoginButton);
+            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.InsertButton);
             this.Controls.Add(this.Label);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.LocationManagerImg);
+            this.Controls.Add(this.LocationOwnerImg);
+            this.Controls.Add(this.LocationBannerImg);
+            this.Controls.Add(this.ManagerImg);
+            this.Controls.Add(this.OwnerImg);
+            this.Controls.Add(this.BannerImg);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.ManagerNameTxtBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.OwnerNameTxtBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TeamShortNameTxtBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.PassTxtBox);
-            this.Controls.Add(this.TeamImgLbl);
-            this.Controls.Add(this.TeamImageBox);
+            this.Controls.Add(this.TeamNameTxtBox);
+            this.Controls.Add(this.LocationTeamImg);
+            this.Controls.Add(this.TeamLogoImg);
             this.Name = "AddTeams";
             this.Text = "AddTeams";
             this.ResumeLayout(false);
@@ -301,28 +307,28 @@
 
         #endregion
 
-        private System.Windows.Forms.Label TeamImgLbl;
-        private System.Windows.Forms.Button TeamImageBox;
+        private System.Windows.Forms.Label LocationTeamImg;
+        private System.Windows.Forms.Button TeamLogoImg;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox PassTxtBox;
+        private System.Windows.Forms.TextBox TeamNameTxtBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TeamShortNameTxtBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox OwnerNameTxtBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox ManagerNameTxtBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button BannerImg;
+        private System.Windows.Forms.Button OwnerImg;
+        private System.Windows.Forms.Button ManagerImg;
+        private System.Windows.Forms.Label LocationBannerImg;
+        private System.Windows.Forms.Label LocationOwnerImg;
+        private System.Windows.Forms.Label LocationManagerImg;
         private System.Windows.Forms.Label Label;
-        private System.Windows.Forms.Button LoginButton;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button InsertButton;
+        private System.Windows.Forms.Button CancelButton;
     }
 }
