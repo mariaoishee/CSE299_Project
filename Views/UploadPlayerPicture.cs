@@ -147,7 +147,7 @@ namespace EventController.Views
         }
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            cls();
+            cls();//
         }
 
         private void InsertButton_Click(object sender, EventArgs e)
