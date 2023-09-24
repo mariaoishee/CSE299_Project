@@ -300,6 +300,7 @@
             this.Controls.Add(this.TeamLogoImg);
             this.Name = "AddTeams";
             this.Text = "AddTeams";
+            this.Load += new System.EventHandler(this.AddTeams_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

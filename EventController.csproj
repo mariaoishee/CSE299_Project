@@ -75,6 +75,12 @@
     <Compile Include="Views\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\UploadPlayerPicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UploadPlayerPicture.Designer.cs">
+      <DependentUpon>UploadPlayerPicture.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\WaitFormFunc.cs" />
     <Compile Include="Views\waitingForEmail.cs">
       <SubType>Form</SubType>
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UploadPlayerPicture.resx">
+      <DependentUpon>UploadPlayerPicture.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\waitingForEmail.resx">
       <DependentUpon>waitingForEmail.cs</DependentUpon>
