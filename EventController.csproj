@@ -49,11 +49,20 @@
     <Compile Include="db.cs" />
     <Compile Include="Email.cs" />
     <Compile Include="Global.cs" />
+    <Compile Include="ImgGrid.cs" />
+    <Compile Include="Models.cs" />
+    <Compile Include="ProjectionController.cs" />
     <Compile Include="Views\AddTeams.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\AddTeams.Designer.cs">
       <DependentUpon>AddTeams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AllPlayers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AllPlayers.Designer.cs">
+      <DependentUpon>AllPlayers.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Form1.cs">
       <SubType>Form</SubType>
@@ -63,11 +72,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\HighlightPlalyers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\HighlightPlalyers.Designer.cs">
+      <DependentUpon>HighlightPlalyers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProjectorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ProjectorForm.Designer.cs">
+      <DependentUpon>ProjectorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Register.cs">
       <SubType>Form</SubType>
@@ -85,6 +106,9 @@
     <EmbeddedResource Include="Views\AddTeams.resx">
       <DependentUpon>AddTeams.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\AllPlayers.resx">
+      <DependentUpon>AllPlayers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,8 +122,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\HighlightPlalyers.resx">
+      <DependentUpon>HighlightPlalyers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ProjectorForm.resx">
+      <DependentUpon>ProjectorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
@@ -122,6 +152,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Pendulum.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crest-01__1_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crest-01__1_-removebg-preview-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -177,5 +177,10 @@ namespace EventController.Views
         {
             this.Close();
         }
+
+        private void AddTeams_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -11,6 +11,7 @@ namespace EventController
 {
     internal class Global
     {
+        public static int DisplayScreen = 0;
         public static string GenarateHash(int length = 20)
         {
             const string valid = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
