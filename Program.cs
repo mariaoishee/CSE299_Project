@@ -23,6 +23,8 @@ namespace EventController
             // Application.Run(new AllPlayers());
             //Application.Run(new ProjectorForm());
             //Application.Run(new HighlightPlayer());
+            Application.Run(new UploadPlayerPicture());
+            //Application.Run(new AddTeams());
         }
     }
 }

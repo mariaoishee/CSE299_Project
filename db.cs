@@ -15,7 +15,7 @@ namespace EventController
 
         public static string Connection_String()
         {
-            return @"Data Source=.\SQLEXPRESS;Initial Catalog=cse299;User Id=ggwp;password=123;TrustServerCertificate=True";
+            return @"Data Source=.\SQLEXPRESS;Initial Catalog=cse299;User Id=Maria;password=123;TrustServerCertificate=True";
         }
 
         public class Set
@@ -25,6 +25,37 @@ namespace EventController
 
         public class Post
         {
+            public static void InsertPlayerImage(
+                  string playerSK,
+                  string profilePic,
+                  string bannerPic,
+                  string batStat,
+                  string bowlStat
+             )
+            {
+                using (SqlConnection connec = new SqlConnection(db.Connection_String()))
+                {
+                    using (SqlCommand cmd = new SqlCommand("InsertNewPlayerImage", connec))
+                    {
+                        connec.Open();
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("@playerSK", playerSK);
+                        cmd.Parameters.AddWithValue("@profilePic", profilePic);
+                        cmd.Parameters.AddWithValue("@bannerPic", bannerPic);
+                        cmd.Parameters.AddWithValue("@batStat", batStat);
+                        cmd.Parameters.AddWithValue("@bowlStat", bowlStat);
+
+
+                        cmd.ExecuteNonQuery();
+                        connec.Close();
+
+                    }
+
+                }
+            }
+
+
             public static void InsertNewTeam(string TeamID, string TeamName, string Image, string Banner,
                 string OwnerImage, string OwnerName, string ManagerImage, string ManagerName,
                 string TeamShortName)
@@ -472,6 +503,24 @@ namespace EventController
 
                 return players;
             }
+
+
+            public static DataTable GetPlayerDataTable()
+            {
+
+                using (SqlConnection conn = new SqlConnection(db.Connection_String()))
+                {
+                    string strQuery = "SELECT * FROM Player";
+                    SqlCommand cmd = new SqlCommand(strQuery, conn);
+                    conn.Open();
+
+                    DataTable dt = new DataTable();
+                    dt.Load(cmd.ExecuteReader());
+
+                    return dt;
+                }
+            }
+
 
 
             public static bool LoginAuth(string email, string password)
