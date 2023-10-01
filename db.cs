@@ -139,7 +139,7 @@ namespace EventController
                                     RowNum = 1
 	
                                 ORDER BY
-                                    MatchDate desc;";
+                                    MatchDate desc;";//gg
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
