@@ -119,13 +119,13 @@ namespace EventController
         {
 
 
-			public List<Team> GetAllTeams()
+			public static List<Team> GetAllTeams()
 			{
 				List<Team> teams = new List<Team>();
 
 				using (SqlConnection connection = new SqlConnection(db.Connection_String()))
 				{
-					string query = "SELECT [TeamID], [TeamName], [Image], [Banner], [OwnerImage], [OwnerName], [ManagerImage], [ManagerName], [DateTime], [TeamShortName] FROM [cse299].[dbo].[Team]";
+					string query = "SELECT * FROM [cse299].[dbo].[Team]";
 
 					using (SqlCommand command = new SqlCommand(query, connection))
 					{
@@ -136,7 +136,7 @@ namespace EventController
 							{
 								Team team = new Team
 								{
-									TeamID = Convert.ToInt32(reader["TeamID"]),
+									TeamID =(reader["TeamID"]).ToString(),
 									TeamName = reader["TeamName"].ToString(),
 									Image = reader["Image"].ToString(),
 									Banner = reader["Banner"].ToString(),

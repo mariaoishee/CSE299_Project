@@ -11,7 +11,7 @@ namespace EventController
 
 		public class Team
 		{
-			public int TeamID { get; set; }
+			public string TeamID { get; set; }
 			public string TeamName { get; set; }
 			public string Image { get; set; }
 			public string Banner { get; set; }
