@@ -84,17 +84,23 @@
     <Compile Include="Views\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ProjectorForm.cs">
+    <Compile Include="Views\PlayerSelection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ProjectorForm.Designer.cs">
-      <DependentUpon>ProjectorForm.cs</DependentUpon>
+    <Compile Include="Views\PlayerSelection.Designer.cs">
+      <DependentUpon>PlayerSelection.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Register.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StartSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\StartSession.Designer.cs">
+      <DependentUpon>StartSession.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UploadPlayerPicture.cs">
       <SubType>Form</SubType>
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StartSession.resx">
+      <DependentUpon>StartSession.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UploadPlayerPicture.resx">
       <DependentUpon>UploadPlayerPicture.cs</DependentUpon>
