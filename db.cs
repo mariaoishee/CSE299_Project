@@ -15,7 +15,7 @@ namespace EventController
 
         public static string Connection_String()
         {
-            return @"Data Source=.\SQLEXPRESS;Initial Catalog=cse299;User Id=Maria;password=123;TrustServerCertificate=True";
+            return @"Data Source=.\SQLEXPRESS;Initial Catalog=cse299;User Id=ggwp;password=123;TrustServerCertificate=True";
         }
 
         public class Set
@@ -117,7 +117,49 @@ namespace EventController
 
         public class Get
         {
-            public static List<BatsmanStatModel> GetLast3BatsmanStats(string playerID)
+
+
+			public List<Team> GetAllTeams()
+			{
+				List<Team> teams = new List<Team>();
+
+				using (SqlConnection connection = new SqlConnection(db.Connection_String()))
+				{
+					string query = "SELECT [TeamID], [TeamName], [Image], [Banner], [OwnerImage], [OwnerName], [ManagerImage], [ManagerName], [DateTime], [TeamShortName] FROM [cse299].[dbo].[Team]";
+
+					using (SqlCommand command = new SqlCommand(query, connection))
+					{
+						connection.Open();
+						using (SqlDataReader reader = command.ExecuteReader())
+						{
+							while (reader.Read())
+							{
+								Team team = new Team
+								{
+									TeamID = Convert.ToInt32(reader["TeamID"]),
+									TeamName = reader["TeamName"].ToString(),
+									Image = reader["Image"].ToString(),
+									Banner = reader["Banner"].ToString(),
+									OwnerImage = reader["OwnerImage"].ToString(),
+									OwnerName = reader["OwnerName"].ToString(),
+									ManagerImage = reader["ManagerImage"].ToString(),
+									ManagerName = reader["ManagerName"].ToString(),
+									DateTime = Convert.ToDateTime(reader["DateTime"]),
+									TeamShortName = reader["TeamShortName"].ToString()
+								};
+
+								teams.Add(team);
+							}
+						}
+                        connection.Close() ;
+					}
+				}
+
+				return teams;
+			}
+
+
+			public static List<BatsmanStatModel> GetLast3BatsmanStats(string playerID)
             {
                 List<BatsmanStatModel> batsmanStats = new List<BatsmanStatModel>();
 

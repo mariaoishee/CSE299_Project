@@ -11,7 +11,7 @@ namespace EventController
     {
         //AllPlayers HighlightPlayer
 
-        public static string ActiveForm = "AllPlayers", highlightPlayerID = "8";
+        public static string ActiveForm = "HighlightPlayer", highlightPlayerID = "14";
 
 
     }

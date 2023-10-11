@@ -9,7 +9,21 @@ namespace EventController
     internal class Models
     {
 
-        public class PlayerModel
+		public class Team
+		{
+			public int TeamID { get; set; }
+			public string TeamName { get; set; }
+			public string Image { get; set; }
+			public string Banner { get; set; }
+			public string OwnerImage { get; set; }
+			public string OwnerName { get; set; }
+			public string ManagerImage { get; set; }
+			public string ManagerName { get; set; }
+			public DateTime DateTime { get; set; }
+			public string TeamShortName { get; set; }
+		}
+
+		public class PlayerModel
         {
             public string Player_SK { get; set; }
             public string Player_Id { get; set; }
