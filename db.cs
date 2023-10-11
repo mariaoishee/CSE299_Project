@@ -20,12 +20,93 @@ namespace EventController
 
         public class Set
         {
+			public static void UpdateSessionData(string sID = "", string val = "0")
+			{
+				using (SqlConnection conn = new SqlConnection(db.Connection_String()))
+				{
+					string strQuery = "UPDATE Session SET Status = '" + val + "' WHERE SessionID = '" + sID + "'";
 
-        }
+					conn.Open();
+					SqlCommand cmd = new SqlCommand(strQuery, conn);
+
+
+					cmd.ExecuteNonQuery();
+				}
+			}
+		}
 
         public class Post
         {
-            public static void InsertPlayerImage(
+
+			public static void PostSessionDetailsData(
+				string SessionID, string ParticipantID,
+				string Type
+				)
+			{
+				using (SqlConnection connec = new SqlConnection(db.Connection_String()))
+				{
+
+					using (SqlCommand cmd = new SqlCommand("InsertNewSessionDetails", connec))
+					{
+
+						connec.Open();
+
+						cmd.CommandType = CommandType.StoredProcedure;
+
+
+
+
+						cmd.Parameters.AddWithValue("@SessionID", SessionID);
+						cmd.Parameters.AddWithValue("@Participant", ParticipantID);
+						cmd.Parameters.AddWithValue("@Unsold", "0");
+						cmd.Parameters.AddWithValue("@Type", Type);
+						cmd.Parameters.AddWithValue("@SessionDetailsID", Global.GenarateHash());
+						cmd.Parameters.AddWithValue("@DateTime", DateTime.Now.ToString(""));
+
+
+						cmd.ExecuteNonQuery();
+						// ID = cmd.ExecuteScalar().ToString();//
+
+						connec.Close();
+
+					}
+
+				}
+			}
+
+			public static void PostSessionData(
+				string SessionID, string Status, string DateTime1
+				)
+			{
+				using (SqlConnection connec = new SqlConnection(db.Connection_String()))
+				{
+
+					using (SqlCommand cmd = new SqlCommand("InsertNewSession", connec))
+					{
+
+						connec.Open();
+
+						cmd.CommandType = CommandType.StoredProcedure;
+
+
+
+						cmd.Parameters.AddWithValue("@SessionID", SessionID);
+						cmd.Parameters.AddWithValue("@Status", Status);
+						cmd.Parameters.AddWithValue("@Date", DateTime1);
+						// ID = cmd.ExecuteScalar().ToString();
+
+						cmd.ExecuteNonQuery();
+
+						connec.Close();
+
+					}
+
+
+				}
+
+			}
+
+			public static void InsertPlayerImage(
                   string playerSK,
                   string profilePic,
                   string bannerPic,
@@ -116,7 +197,80 @@ namespace EventController
 
 
         public class Get
-        {
+		{
+
+			public static DataTable getSessionDetails(string sID = "1")
+			{
+				using (SqlConnection conn = new SqlConnection(db.Connection_String()))
+				{
+					string strQuery = "SELECT *  FROM SessionDetails WHERE SessionID = '" + sID + "'";
+					SqlCommand cmd = new SqlCommand(strQuery, conn);
+					conn.Open();
+
+					DataTable dt = new DataTable();
+					SqlDataReader sdr = cmd.ExecuteReader();
+					dt.Load(sdr);
+
+					return dt;
+				}
+			}
+			public static DataTable getPlayerDetails(string pID = "")
+			{
+				using (SqlConnection conn = new SqlConnection(db.Connection_String()))
+				{
+					string strQuery;
+					if (pID.Equals(""))
+						strQuery = "SELECT *  FROM Player";
+					else
+						strQuery = "SELECT *  FROM Player WHERE Player_Id = '" + pID + "'";
+					SqlCommand cmd = new SqlCommand(strQuery, conn);
+					conn.Open();
+
+					DataTable dt = new DataTable();
+					SqlDataReader sdr = cmd.ExecuteReader();
+					dt.Load(sdr);
+					return dt;
+				}
+			}
+			public static DataTable getTeamDetails(string TID = "")
+			{
+				using (SqlConnection conn = new SqlConnection(db.Connection_String()))
+				{
+					string strQuery;
+					if (TID.Equals(""))
+						strQuery = "SELECT *  FROM Team";
+					else
+						strQuery = "SELECT *  FROM Team WHERE TeamID = '" + TID + "'";
+
+					SqlCommand cmd = new SqlCommand(strQuery, conn);
+					conn.Open();
+
+					DataTable dt = new DataTable();
+					SqlDataReader sdr = cmd.ExecuteReader();
+					dt.Load(sdr);
+
+					return dt;
+				}
+			}
+			public static DataTable getSessionData(string sID = "")
+			{
+				using (SqlConnection conn = new SqlConnection(db.Connection_String()))
+				{
+					string strQuery;
+					if (sID.Equals(""))
+						strQuery = "SELECT *  FROM Session ";
+					else
+						strQuery = "SELECT *  FROM Session WHERE SessionID = '" + sID + "'";
+					SqlCommand cmd = new SqlCommand(strQuery, conn);
+					conn.Open();
+
+					DataTable dt = new DataTable();
+					SqlDataReader sdr = cmd.ExecuteReader();
+					dt.Load(sdr);
+
+					return dt;
+				}
+			}
 
 
 			public static List<Team> GetAllTeams()
