@@ -18,7 +18,12 @@ namespace EventController
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Register());
-            Application.Run(new UploadPlayerPicture());
+            //Application.Run(new Login());
+            //Application.Run(new AddTeams());
+            // Application.Run(new AllPlayers());
+            Application.Run(new ProjectorForm());
+            //Application.Run(new HighlightPlayer());
+            //Application.Run(new UploadPlayerPicture());
             //Application.Run(new AddTeams());
         }
     }
