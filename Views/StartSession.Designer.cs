@@ -112,6 +112,7 @@
             this.Controls.Add(this.SessionTextBox);
             this.Name = "StartSession";
             this.Text = "StartSession";
+            this.Load += new System.EventHandler(this.StartSession_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

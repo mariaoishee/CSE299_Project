@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace EventController.Views
 {
-    public partial class StartSession : Form
+    public partial class TeamSelection : Form
     {
-        public StartSession()
+        public TeamSelection()
         {
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void StartSession_Load(object sender, EventArgs e)
+        private void TeamSelection_Load(object sender, EventArgs e)
         {
 
         }
