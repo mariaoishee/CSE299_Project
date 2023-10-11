@@ -102,11 +102,11 @@
     <Compile Include="Views\StartSession.Designer.cs">
       <DependentUpon>StartSession.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\TeamLotterySelection.cs">
+    <Compile Include="Views\TeamSelection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\TeamLotterySelection.Designer.cs">
-      <DependentUpon>TeamLotterySelection.cs</DependentUpon>
+    <Compile Include="Views\TeamSelection.Designer.cs">
+      <DependentUpon>TeamSelection.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UploadPlayerPicture.cs">
       <SubType>Form</SubType>
@@ -146,6 +146,9 @@
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\PlayerSelection.resx">
+      <DependentUpon>PlayerSelection.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\ProjectorForm.resx">
       <DependentUpon>ProjectorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,8 +158,8 @@
     <EmbeddedResource Include="Views\StartSession.resx">
       <DependentUpon>StartSession.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\TeamLotterySelection.resx">
-      <DependentUpon>TeamLotterySelection.cs</DependentUpon>
+    <EmbeddedResource Include="Views\TeamSelection.resx">
+      <DependentUpon>TeamSelection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UploadPlayerPicture.resx">
       <DependentUpon>UploadPlayerPicture.cs</DependentUpon>
