@@ -199,6 +199,77 @@ namespace EventController
         public class Get
 		{
 
+
+			public static DataTable getActiveRoundInfo()
+			{
+
+				using (SqlConnection conn = new SqlConnection(db.Connection_String()))
+				{
+					string strQuery = @"
+                                        SELECT * FROM RoundInformation
+                                        WHERE Status = '1' ";
+					SqlCommand cmd = new SqlCommand(strQuery, conn);
+					conn.Open();
+
+					DataTable dt = new DataTable();
+					SqlDataReader sdr = cmd.ExecuteReader();
+					dt.Load(sdr);
+
+					return dt;
+				}
+
+			}
+
+
+
+			public static DataTable getTeamsParticipating(string sid)
+			{
+
+				using (SqlConnection conn = new SqlConnection(db.Connection_String()))
+				{
+
+
+					string strQuery = @"SELECT *
+                        FROM SessionDetails 
+                        JOIN Team ON Team.TeamID = SessionDetails.Participant
+                        WHERE Type = '1' AND  SessionDetails.SessionID = '" + sid + "'";
+					SqlCommand cmd = new SqlCommand(strQuery, conn);
+					conn.Open();
+
+					DataTable dt = new DataTable();
+					SqlDataReader sdr = cmd.ExecuteReader();
+					dt.Load(sdr);
+
+					return dt;
+				}
+
+			}
+
+			public static DataTable getDistinctCategory(string sid)
+			{
+
+				using (SqlConnection conn = new SqlConnection(db.Connection_String()))
+				{
+					string strQuery = @"
+                                       SELECT DISTINCT(Country_Name)
+                                        FROM Player 
+                                        JOIN SessionDetails
+                                        ON Player.Player_ID = SessionDetails.Participant 
+                                        JOIN Session
+                                        ON SessionDetails.SessionID = Session.SessionID
+                                        WHERE Session.SessionID = '" + sid + "'";
+					SqlCommand cmd = new SqlCommand(strQuery, conn);
+					conn.Open();
+
+					DataTable dt = new DataTable();
+					SqlDataReader sdr = cmd.ExecuteReader();
+					dt.Load(sdr);
+
+					return dt;
+				}
+
+			}
+
 			public static DataTable getSessionDetails(string sID = "1")
 			{
 				using (SqlConnection conn = new SqlConnection(db.Connection_String()))
